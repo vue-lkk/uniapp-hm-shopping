@@ -45,7 +45,7 @@
 			"iconPath": "static/logo.png"
 		}, {
 			"pagePath": "pages/cate/cate",
-			"text": "详情",
+			"text": "分类",
 			"iconPath": "static/logo.png"
 		}, {
 			"pagePath": "pages/cart/cart",
