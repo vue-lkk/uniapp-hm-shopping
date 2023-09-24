@@ -201,45 +201,4 @@ uni-tag{
 	margin: 16rpx 12rpx;
 }
 
-
-@mixin flex {
-		/* #ifndef APP-NVUE */
-		display: flex;
-		/* #endif */
-		flex-direction: row;
-	}
-
-	@mixin height {
-		/* #ifndef APP-NVUE */
-		height: 100%;
-		/* #endif */
-		/* #ifdef APP-NVUE */
-		flex: 1;
-		/* #endif */
-	}
-
-	.box {
-		@include flex;
-	}
-
-	.button {
-		@include flex;
-		align-items: center;
-		justify-content: center;
-		flex: 1;
-		height: 35px;
-		margin: 0 5px;
-		border-radius: 5px;
-	}
-
-	.example-body {
-		background-color: #fff;
-		padding: 10px 0;
-	}
-
-	.button-text {
-		color: #fff;
-		font-size: 12px;
-	}
-
 </style>
