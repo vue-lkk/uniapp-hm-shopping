@@ -3,8 +3,11 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "首页",
 				"enablePullDownRefresh": false
+				// "app-plus": {  // 去掉navBar 标头
+				// 	"titleNView": false
+				// }
 			}
 
 		}, {
@@ -59,24 +62,27 @@
 	},
 	"subPackages": [{
 		"root": "subpkg",
-		"pages": [
-			{
-				"path": "goods-detail/goods-detail",
-				"style": {
-					"navigationBarTitleText": "",
-					"enablePullDownRefresh": false
-				}
-
+		"pages": [{
+			"path": "goods-detail/goods-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
-		    ,{
-                    "path" : "goods_list/goods_list",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+
+		}, {
+			"path": "goods_list/goods_list",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "search/search",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}]
 	}]
 }

@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<my-search @gotoSearch="gotoSearch" radius="20"></my-search>
 		<view class="scroll-view-container">
 			<!-- 左侧的（一级分类）滚动视图区域 -->
 			<scroll-view class="left-scroll-view" scroll-y :style="{height:wh + 'px'}">
@@ -66,7 +67,7 @@
 				const systemInfo = uni.getSystemInfoSync()
 				console.log(systemInfo)
 				// 为 wh 窗口可用高度动态赋值
-				this.wh = systemInfo.windowHeight
+				this.wh = systemInfo.windowHeight - 50
 			},
 			
 			async getCateList() {
@@ -95,6 +96,13 @@
 			gotoGoodsList(item3) {
 				uni.navigateTo({
 					url:'/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+				})
+			},
+			
+			// 跳转到搜页
+			gotoSearch () {
+				uni.navigateTo({
+					url:"/subpkg/search/search"
 				})
 			}
 		}
