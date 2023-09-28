@@ -56,6 +56,16 @@
 						"checkSiteMap":false
         },
         "usingComponents" : true
+				// "requiredPrivateInfos":[
+				// 	"getFuzzyLocation",
+				// 	"choosePoi",
+				// 	"chooseAddress"
+				// ],
+				// "permission": {
+				// 	"scope.userLocation": {
+				// 		"desc": "你的位置信息将用来进行借口调试"
+				// 	}
+				// }
     },
     "mp-alipay" : {
         "usingComponents" : true 

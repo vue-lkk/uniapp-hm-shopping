@@ -4,6 +4,8 @@ import App from './App'
 import Vue from 'vue'
 import './uni.promisify.adaptor'
 import { $http } from '@escook/request-miniprogram'
+// 1. 导入 store 的实例对象
+import store from '@/store/store.js'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
@@ -33,7 +35,9 @@ uni.$showMsg = function (title="数据加载失败", duration=1000){
 }
 
 const app = new Vue({
-  ...App
+  ...App,
+	// 2. 将 store 挂载到 Vue 实例上
+	store
 })
 app.$mount()
 // #endif
