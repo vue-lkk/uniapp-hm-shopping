@@ -46,6 +46,7 @@
 <script>
 	// 导入自己封装的 mixin 模块
 	import badgeMixin from '@/mixins/tabbar-badge.js'
+import { mapGetters } from 'vuex';
 	import {mapState,mapMutations} from 'vuex'
 	
 	export default {
@@ -72,6 +73,10 @@
 		},
 		methods: {
 			...mapMutations('m_cart',['updateGoodsState','updateGoodsCount','removeGoodsById']),
+			// addstr 是详细的收货地址
+			...mapGetters('m_user',['addstr']),
+			 // token 是用户登录成功之后的 token 字符串
+			...mapState('m_user',['token']),
 			// 商品的勾选状态发生了变化
 			radioChangeHandler(goods) {
 				this.updateGoodsState(goods)
